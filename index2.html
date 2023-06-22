@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
+    <script src="main2.js"></script>
+    <title>Editor</title>
+</head>
+<body>
+    <header id="main" class="grid bg-primary-400 text-neutral-100">
+        <h1 class="fs-h2">CKEditor Ecosystem Documentation</h1>
+        <input type="search" name="searchbar" id="searchbar" placeholder="Search in CKEditor 5" class="corners-rounded fs-300">
+    </header>
+    <nav id="main" class="bg-neutral-200 text-neutral-800">
+        <ul role="list" class="flex fs-300">
+            <li><a href="/">CKEditor 5</a></li>
+            <li><a href="/">Getting started</a></li>
+            <li><a href="/">Features</a></li>
+            <li><a href="/">Examples</a></li>
+            <li><a href="/">Updating</a></li>
+            <li><a href="/">Support</a></li>
+            <li><a href="/">Framework</a></li>
+            <li><a href="/">API</a></li>
+            <li class="svg"><a href="/"><svg viewBox="0 0 24 24" ><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></a></li>
+        </ul>
+    </nav>
+    <div id="body" class="grid">
+        <nav id="side" class="text-neutral-800 fs-300">
+            <ul role="list">
+                <li>Predefined Builds</li>
+                <ul role="list">
+                    <li class="inner"><a href="/">Classic editor</a></li>
+                    <li class="inner"><a href="/">Inline editor</a></li>
+                    <li class="inner"><a href="/">Balloon editor</a></li>
+                    <li class="inner"><a href="/">Document editor</a></li>
+                    <li class="inner"><a href="/">Multi-root editor</a></li>
+                </ul>
+                <li>Custom Builds</li>
+                <ul role="list">
+                    <li class="inner"><a href="/">Classic editor</a></li>
+                    <li class="inner"><a href="/">Inline editor</a></li>
+                    <li class="inner"><a href="/">Balloon editor</a></li>
+                    <li class="inner"><a href="/">Document editor</a></li>
+                    <li class="inner"><a href="/">Multi-root editor</a></li>
+                </ul>
+                <li>Framework</li>
+                <ul role="list">
+                    <li class="inner"><a href="/">Chat with mentions</a></li>
+                    <li class="inner"><a href="/">Theme customizations</a></li>
+                    <li class="inner"><a href="/">Custom UI (with Bootstrap)</a></li>
+                    <li class="inner"><a href="/">Data from an external source</a></li>
+                    <li class="inner"><a href="/">React components in an editor</a></li>
+                    <li class="inner"><a href="/">Content placeholder</a></li>
+                </ul>
+                <li>Experiments</li>
+                <ul role="list">
+                    <li class="inner"><a href="/">Flowcharts and diagrams</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <section aria-labelledby="main-section-heading" id="main-section" class="flex-col">
+            <h2 id="main-section-heading" class="fs-h1">Classic Editor</h2>
+            <p>Classic editor shows a boxed editing area with a toolbar, placed in a specific position on the page.</p>
+            <div id="editor">
+                <h3 class="fs-h2">The three greatest things you learn from traveling</h3>
+                <p>Like all the great things on earth traveling teaches us by example. Here are some of the most precious lessons I’ve learned over the years of traveling.</p>
+                <h4>Appreciation of diversity</h4>
+                <p>Getting used to an entirely different culture can be challenging. While it’s also nice to learn about cultures online or from books, nothing comes close to experiencing cultural diversity in person. You learn to appreciate each and every single one of the differences while you become more culturally fluid.</p>
+                
+            </div>
+        </section>
+    </div>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .then( editor => {
+                window.editor = editor
+            })
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+</body>
+</html>
